@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["click", "type", "press", "scroll", "wait", "done"]
+    },
+    "element_id": {
+      "type": ["integer", "null"],
+      "description": "Observation에 나온 element_id. 필요 없는 action이면 null."
+    },
+    "text": {
+      "type": "string",
+      "description": "type 또는 press action에 사용할 텍스트. 없으면 빈 문자열."
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": ["action", "element_id", "text", "reason"],
+  "additionalProperties": false
+}
